@@ -1,0 +1,7 @@
+<h2 class="content-subhead"><%= @title %></h2>
+
+<% if params['search_term'] %>
+  <%= highlight(render_paragraphs_with_tags(@chapter), params['search_term']) %>
+<% else %>
+  <%= render_paragraphs_with_tags(@chapter) %>
+<% end %>
